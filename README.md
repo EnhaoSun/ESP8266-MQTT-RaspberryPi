@@ -38,9 +38,9 @@ To configure the server environment: first, open the terminal and type
 </p>
 Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.
 <p align="center">
-	<b>sudo pip install Flask</b>
-	<b>sudo pip install flask-socketio</b>
-	<b>sudo pip install flask-bootstrap</b>
+	<b>sudo pip install Flask</b><br></br>
+	<b>sudo pip install flask-socketio</b><br></br>
+	<b>sudo pip install flask-bootstrap</b><br></br>
 </p>
 To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:
 <p align="center">
@@ -53,7 +53,7 @@ The broker is primarily responsible for **receiving** all messages, **filtering*
 
 ![](ESP-MQTT-RASPBERRY.png)
 
-Simply, the broker is like a delivery station. Mqtt client on Esp8266 is a publisher which send packages to the broker. Then the broker will transit those packages to the mqtt client(mqtt client on raspberry pi) who has subscribed this topic.\
+Simply, the broker is like a delivery station. Mqtt client on Esp8266 is a publisher which send packages to the broker. Then the broker will transit those packages to the mqtt client(mqtt client on raspberry pi) who has subscribed this topic.
 
 To configure and start the mosquito service. Open the file as follows:
 <p align="center">
