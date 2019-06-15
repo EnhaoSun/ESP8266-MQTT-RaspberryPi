@@ -35,13 +35,13 @@ For sensor pins, use following wiring:
 To configure the server environment:
 First, open the terminal and type
 <p align="center">
-	**sudo apt-get update**\
+	<b>sudo apt-get update</b>
 </p>
 Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.\
 <p align="center">
-	**sudo pip install Flask**\
-	**sudo pip install flask-socketio**\
-        **sudo pip install flask-bootstrap**\
+	sudo pip install Flask <br>
+	sudo pip install flask-socketio
+        sudo pip install flask-bootstrap
 </p>
 To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:\
 	**sudo pip install flask-mqtt**\
