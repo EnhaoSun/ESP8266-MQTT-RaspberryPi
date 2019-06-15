@@ -20,3 +20,4 @@ P.S: I did this project in 2017 summer. The code was almost lost now. If I have 
 ## STEP 1: Connect a DHT22 sensor to ESP8266
 In this section, use the breadboard and jumper wires to make the connection as follows.
 
+![](ESP8266-DHT22.png)
