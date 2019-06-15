@@ -33,6 +33,9 @@ For sensor pins, use following wiring:
 
 ## STEP 2: Configure and set up Raspberry pi
 To configure the server environment: first, open the terminal and type
+```linux
+sudo apt-get update
+```
 <p align="center">
 	<b>sudo apt-get update</b>
 </p>
