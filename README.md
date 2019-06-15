@@ -32,16 +32,15 @@ For sensor pins, use following wiring:
 
 
 ## STEP 2: Configure and set up Raspberry pi
-To configure the server environment:
-First, open the terminal and type
+To configure the server environment: first, open the terminal and type
 <p align="center">
 	<b>sudo apt-get update</b>
 </p>
 Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.
 <p align="center">
-	<b>sudo pip install Flask</b> <br>
-	<b>sudo pip install flask-socketio</b><br>
-	<b>sudo pip install flask-bootstrap</b><br></br>
+	<b>sudo pip install Flask</b>
+	<b>sudo pip install flask-socketio</b>
+	<b>sudo pip install flask-bootstrap</b>
 </p>
 To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:
 <p align="center">
