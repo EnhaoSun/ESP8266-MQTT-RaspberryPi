@@ -24,6 +24,7 @@ In this section, use the breadboard and jumper wires to make the connection as f
 
 For sensor pins, use following wiring:
 | Sensor | ESP8266 | Cable |
+| ------ | ------- | ----- |
 | VCC(3.3-5v) | VCC(3V) | Blue |
 | DATA | GPIO 2 | Red |
 | GND | GND | Black |
