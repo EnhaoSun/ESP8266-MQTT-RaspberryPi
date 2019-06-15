@@ -132,11 +132,11 @@ sudo /etc/init.d/mosquito start
 
 STEP 3: Upload the scratch to ESP8266
 1.	Wifi client connect to wifi
-    a. WiFi_client.begin(ssid, password)
+    1. WiFi_client.begin(ssid, password)
 2.	Udp client for getting local time
-    a. You can use other methods to get time.
+    1. You can use other methods to get time.
 3.	MQTT client connect to server(Broker address) and publish message
-    a. mqtt_client.setServer(serverAddress, port)
-    b. mqtt_client.setCallback(callback) callback is a function which can be write by you own
-    c. mqtt_client.publish(Topic, message);
+    1. mqtt_client.setServer(serverAddress, port)
+    2. mqtt_client.setCallback(callback) callback is a function which can be write by you own
+    3. mqtt_client.publish(Topic, message);
 
