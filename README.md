@@ -32,11 +32,11 @@ For sensor pins, use following wiring:
 
 
 ## STEP 2: Configure and set up Raspberry pi
-To configure the server environment: first, open the terminal and type
+To configure the server environment: 
+First, open the terminal and type
 ```linux
 sudo apt-get update
 ```
-
 Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.
 ```linux
 sudo pip install Flask
@@ -45,7 +45,7 @@ sudo pip install flask-bootstrap
 ```
 To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:
 ```linux
-	sudo pip install flask-mqtt
+sudo pip install flask-mqtt
 ```
 
 ## STEP 3: Run server program
@@ -58,8 +58,20 @@ Simply, the broker is like a delivery station. Mqtt client on Esp8266 is a publi
 
 To configure and start the mosquito service. Open the file as follows:
 ```linux
-	sudo nano /etc/mosquito/mosquito.conf
+sudo nano /etc/mosquito/mosquito.conf
 ```
 You should see the following:
 
+```linux
+# Place your local configuration in /etc/mosquitto/conf.d/
+#
+# A full description of the configuration file is at
+# /usr/share/doc/mosquitto/examples/mosquitto.conf.example
 
+pid_file /var/run/mosquitto.pid
+
+persistence true
+persistence_location /var/lib/mosquitto/
+
+log_dest file /var/log/mosquitto/mosquitto.log
+```
