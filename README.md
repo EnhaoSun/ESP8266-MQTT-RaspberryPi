@@ -125,8 +125,7 @@ sudo /etc/init.d/mosquito start
 
 **Finally, run the server program which contains a mqtt client subscribing the special Topic and waiting for another mqtt client publish the message.**
 
-**Set up mqtt server
+**Set up mqtt server**
 * MQTT_BROKER_URL: Broker address(your raspberry pi’s ip address)
 * MQTT_BROKER_PORT: normally 1883
 * MQTT_USERNAME and PASSWORD: set if you want
-**
