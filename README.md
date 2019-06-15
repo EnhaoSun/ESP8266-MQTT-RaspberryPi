@@ -41,12 +41,13 @@ Next, we will need to install a framework called Flask and two packages called f
 <p align="center">
 	<b>sudo pip install Flask</b> <br>
 	<b>sudo pip install flask-socketio</b><br>
-	<b>sudo pip install flask-bootstrap</b><br>
+	<b>sudo pip install flask-bootstrap</b><br></br>
 </p>
 To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:
 <p align="center">
 	<b>sudo pip install flask-mqtt</b>
 </p>
+
 ## STEP 3: Run server program
 In this section, we will need to use Raspberry pi as a Broker.
 The broker is primarily responsible for **receiving** all messages, **filtering** the messages, **decide** who is interested in it and then **publishing** the message to all subscribed clients.
