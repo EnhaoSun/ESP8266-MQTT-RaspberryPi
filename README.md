@@ -130,7 +130,7 @@ sudo /etc/init.d/mosquito start
 * MQTT_BROKER_PORT: normally 1883
 * MQTT_USERNAME and PASSWORD: set if you want
 
-STEP 3: Upload the scratch to ESP8266
+## STEP 3: Upload the scratch to ESP8266
 1.	Wifi client connect to wifi
     1. WiFi_client.begin(ssid, password)
 2.	Udp client for getting local time
@@ -140,3 +140,8 @@ STEP 3: Upload the scratch to ESP8266
     2. mqtt_client.setCallback(callback) callback is a function which can be write by you own
     3. mqtt_client.publish(Topic, message);
 
+## UML diagram for integration of client and server:
+![](UML.png)
+
+## STEP 4: Raspberry pi receive the data and store it into database.
+After the mqtt client on ESP8266 publishing the message, the mqtt client on Raspbian which has already subscribed the topic will receive the message. Then using socketio sending data to website which using bootstrap template to display and store the data into database using sqlite3 at same time.
