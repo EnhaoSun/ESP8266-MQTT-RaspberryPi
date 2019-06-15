@@ -34,25 +34,28 @@ For sensor pins, use following wiring:
 ## STEP 2: Configure and set up Raspberry pi
 To configure the server environment:
 First, open the terminal and type
-	**sudo apt-get update**  
-Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.  
-	**sudo pip install Flask**  
-	**sudo pip install flask-socketio**  
-        **sudo pip install flask-bootstrap**  
-
-To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:
-	**sudo pip install flask-mqtt**  
+<p align="center">
+	**sudo apt-get update**\
+</p>
+Next, we will need to install a framework called Flask and two packages called flask-socketio and flask-bootstrap to create a website for displaying the data.\
+<p align="center">
+	**sudo pip install Flask**\
+	**sudo pip install flask-socketio**\
+        **sudo pip install flask-bootstrap**\
+</p>
+To communicate with esp8266, we still need another Flask extension called Flask-MQTT. (MQTT is a machine-to-machine "Internet of Things" protocol and was designed for extremely lightweight publish/subscribe messaging transport.) Simply install the package as usual via pip:\
+	**sudo pip install flask-mqtt**\
 
 ## STEP 3: Run server program
-In this section, we will need to use Raspberry pi as a Broker.
-The broker is primarily responsible for **receiving** all messages, **filtering** the messages, **decide** who is interested in it and then **publishing** the message to all subscribed clients.
+In this section, we will need to use Raspberry pi as a Broker.\
+The broker is primarily responsible for **receiving** all messages, **filtering** the messages, **decide** who is interested in it and then **publishing** the message to all subscribed clients.\
 
 ![](ESP-MQTT-RASPBERRY.png)
 
-Simply, the broker is like a delivery station. Mqtt client on Esp8266 is a publisher which send packages to the broker. Then the broker will transit those packages to the mqtt client(mqtt client on raspberry pi) who has subscribed this topic.  
+Simply, the broker is like a delivery station. Mqtt client on Esp8266 is a publisher which send packages to the broker. Then the broker will transit those packages to the mqtt client(mqtt client on raspberry pi) who has subscribed this topic.\
 
-To configure and start the mosquito service. Open the file as follows:  
-  **sudo nano /etc/mosquito/mosquito.conf**  
-You should see the following:  
+To configure and start the mosquito service. Open the file as follows:\
+  **sudo nano /etc/mosquito/mosquito.conf**\
+You should see the following:\
 
 
