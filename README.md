@@ -129,3 +129,14 @@ sudo /etc/init.d/mosquito start
 * MQTT_BROKER_URL: Broker address(your raspberry pi’s ip address)
 * MQTT_BROKER_PORT: normally 1883
 * MQTT_USERNAME and PASSWORD: set if you want
+
+STEP 3: Upload the scratch to ESP8266
+1.	Wifi client connect to wifi
+a)	WiFi_client.begin(ssid, password)
+2.	Udp client for getting local time
+a)	You can use other methods to get time.
+3.	MQTT client connect to server(Broker address) and publish message
+a)	mqtt_client.setServer(serverAddress, port)
+b)	mqtt_client.setCallback(callback) callback is a function which can be write by you own
+c)	mqtt_client.publish(Topic, message);
+
